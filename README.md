@@ -195,11 +195,7 @@ URI newPollUri = ServletUriComponentsBuilder
 * Inside the method, we use the `PollRepository`’s `findOne` finder method to read the poll and pass it as part of a `ResponseEntity`.
 
 ```java
-@RequestMapping(value="/polls/{pollId}", method=RequestMethod.GET)
-public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
-	Poll p = pollRepository.findOne(pollId);
-	return new ResponseEntity<> (p, HttpStatus.OK);
-}
+
 ```
 
 
